@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TELA | woven table lamp — Download</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #f5f0e8;
+    --sand: #d4c4a8;
+    --warm: #b8956a;
+    --dark: #1a1614;
+    --mid: #6b5b4e;
+  }
+
+  body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.93);
+    transition: filter 0.3s ease;
+  }
+
+  .hero img:hover {
+    filter: brightness(1.02);
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 24px 48px;
+  }
+
+  .logo-ring {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 1px solid var(--sand);
+    position: relative;
+    margin-top: -36px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    animation: fadeUp 0.8s ease both;
+    flex-shrink: 0;
+    background: var(--cream);
+    box-shadow: 0 0 0 6px var(--cream);
+    z-index: 2;
+  }
+
+  .logo-ring::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(212,196,168,0.4);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .logo-ring img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    color: var(--dark);
+    line-height: 1;
+    margin-bottom: 6px;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+
+  .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--mid);
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .tagline {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sand);
+    margin-bottom: 28px;
+    animation: fadeUp 0.8s 0.25s ease both;
+  }
+
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--sand);
+    margin-bottom: 24px;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  .label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 24px;
+    animation: fadeUp 0.8s 0.32s ease both;
+  }
+
+  .links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    text-decoration: none;
+    border: 1px solid var(--sand);
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(8px);
+    color: var(--dark);
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(184,149,106,0.08), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+
+  .btn:hover {
+    border-color: var(--warm);
+    background: rgba(255,255,255,0.7);
+    transform: translateY(-1px);
+  }
+
+  .btn:hover::before {
+    transform: translateX(100%);
+  }
+
+  .btn:nth-child(1) { animation-delay: 0.4s; }
+  .btn:nth-child(2) { animation-delay: 0.5s; }
+  .btn:nth-child(3) { animation-delay: 0.6s; }
+  .btn:nth-child(4) { animation-delay: 0.7s; }
+
+  .btn-left {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    text-align: left;
+  }
+
+  .btn-platform {
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: var(--dark);
+  }
+
+  .btn-desc {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--mid);
+    text-transform: uppercase;
+  }
+
+  .btn-arrow {
+    font-size: 16px;
+    color: var(--warm);
+    opacity: 0.6;
+    transition: opacity 0.25s, transform 0.25s;
+  }
+
+  .btn:hover .btn-arrow {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+
+  .btn-sub {
+    border-color: rgba(212,196,168,0.4);
+    background: rgba(255,255,255,0.2);
+  }
+
+  .footer {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sand);
+    text-align: center;
+    animation: fadeUp 0.8s 0.75s ease both;
+  }
+
+  .footer a {
+    color: var(--warm);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  .footer a:hover {
+    opacity: 1;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="hero">
+    <img src="images/TELA_table-lamp_blue-side-ON.JPG" alt="TELA woven table lamp">
+    <img src="images/TELA_table-lamp_blue-white-ON-2.JPG" alt="TELA woven table lamp in a living space">
+    <img src="images/TELA_table-lamp_blue-white-top-ON.JPG" alt="TELA top view showing the woven structure">
+    <img src="images/TELA_table-lamp_white-mesh-closeup.JPG" alt="TELA woven texture close-up">
+  </div>
+
+  <div class="container">
+
+    <div class="logo-ring">
+      <img src="https://charlesregaud.github.io/assets/CR-logo_104-square_blurred.jpg" alt="Charles Regaud">
+    </div>
+
+    <h1 class="title">TELA</h1>
+    <p class="subtitle">woven table lamp</p>
+    <p class="tagline">Warm light &middot; Woven texture &middot; Sculptural form</p>
+
+    <div class="divider"></div>
+
+    <p class="label">Download the STL files</p>
+
+    <div class="links">
+
+      <a href="https://www.printables.com/model/745457-tela-table-lamp-e14-e27-e26-fast-print" target="_blank" class="btn">
+        <div class="btn-left">
+          <span class="btn-platform">Printables</span>
+          <span class="btn-desc">TELA &middot; personal &amp; commercial</span>
+        </div>
+        <span class="btn-arrow">&#8594;</span>
+      </a>
+
+      <a href="https://than.gs/m/1000001" target="_blank" class="btn">
+        <div class="btn-left">
+          <span class="btn-platform">Thangs</span>
+          <span class="btn-desc">TELA &middot; personal &amp; commercial</span>
+        </div>
+        <span class="btn-arrow">&#8594;</span>
+      </a>
+
+      <a href="https://cults3d.com/:1750871" target="_blank" class="btn">
+        <div class="btn-left">
+          <span class="btn-platform">Cults3D</span>
+          <span class="btn-desc">TELA &middot; STL files</span>
+        </div>
+        <span class="btn-arrow">&#8594;</span>
+      </a>
+
+      <a href="https://www.cubee3d.com/plans/?code=JFgSZWCUjWju" target="_blank" class="btn btn-sub">
+        <div class="btn-left">
+          <span class="btn-platform">Cubee Hive</span>
+          <span class="btn-desc">Full catalogue &middot; membership access</span>
+        </div>
+        <span class="btn-arrow">&#8594;</span>
+      </a>
+
+    </div>
+
+    <p class="footer">
+      Designed by <a href="https://www.instagram.com/charles_regaud" target="_blank">@charles_regaud</a>
+    </p>
+
+  </div>
+
+</body>
+</html>
